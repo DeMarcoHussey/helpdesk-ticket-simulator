@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help Desk Ticket Simulator — DeMarco Hussey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Help Desk Ticket Simulator</h1>
+    <p class="subtitle">DeMarco Hussey • Technical Support Specialist</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Create a Ticket</h2>
+      <form id="ticketForm">
+        <label>Requester Name
+          <input type="text" id="reqName" placeholder="John Smith" required>
+        </label>
+        <label>Contact Email
+          <input type="email" id="reqEmail" placeholder="john.smith@example.com" required>
+        </label>
+        <label>Category
+          <select id="category" required>
+            <option value="Printer">Printer</option>
+            <option value="Wi-Fi">Wi-Fi</option>
+            <option value="VPN">VPN</option>
+            <option value="Password">Password</option>
+            <option value="Software">Software</option>
+            <option value="Hardware">Hardware</option>
+          </select>
+        </label>
+        <label>Issue Description
+          <textarea id="description" rows="4" placeholder="Describe the issue..." required></textarea>
+        </label>
+        <button type="submit">Submit Ticket</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Tickets</h2>
+        <div class="filters">
+          <label>Status
+            <select id="statusFilter">
+              <option value="All">All</option>
+              <option value="Open">Open</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Resolved">Resolved</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </label>
+          <label>Category
+            <select id="categoryFilter">
+              <option value="All">All</option>
+              <option value="Printer">Printer</option>
+              <option value="Wi-Fi">Wi-Fi</option>
+              <option value="VPN">VPN</option>
+              <option value="Password">Password</option>
+              <option value="Software">Software</option>
+              <option value="Hardware">Hardware</option>
+            </select>
+          </label>
+          <button id="exportBtn" title="Export tickets as JSON">Export JSON</button>
+        </div>
+      </div>
+      <div id="ticketsList" class="tickets"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Knowledge Base</h2>
+      <p>Common fixes and runbooks:</p>
+      <ul class="kb-list">
+        <li><a href="docs/kb_printer_offline.md" target="_blank">Printer Offline — Quick Fix</a></li>
+        <li><a href="docs/kb_wifi_troubleshooting.md" target="_blank">Wi-Fi Troubleshooting (Windows/macOS)</a></li>
+        <li><a href="docs/kb_vpn_cannot_connect.md" target="_blank">VPN Cannot Connect — Checklist</a></li>
+        <li><a href="docs/kb_password_reset_o365.md" target="_blank">Reset Password — Microsoft 365</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 DeMarco Hussey • Demo app for City of Philadelphia OIT role</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

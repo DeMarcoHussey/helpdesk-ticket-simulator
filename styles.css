@@ -1,0 +1,24 @@
+:root{
+  --blue:#00356b; --bg:#f7f9fc; --text:#1f2937; --card:#ffffff; --muted:#6b7280; --border:#e5e7eb;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);}
+.topbar{background:var(--blue);color:#fff;padding:18px 24px}
+.subtitle{margin:6px 0 0;color:#cfe0ff}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 16px 8px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+form label{display:block;margin:8px 0;font-weight:600}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;margin-top:4px}
+button{background:var(--blue);color:#fff;border:0;border-radius:8px;padding:10px 14px;cursor:pointer}
+button:hover{opacity:.95}
+.filters{display:flex;gap:10px;align-items:end;flex-wrap:wrap}
+.tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ticket{border:1px solid var(--border);border-radius:10px;padding:12px;background:#fff}
+.ticket h3{margin:0 0 6px}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:.8rem;background:#eef2ff;color:#113a8f;margin-right:6px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.meta{color:var(--muted);font-size:.85rem}
+.kb-list{padding-left:18px}
+.footer{padding:16px;text-align:center;color:#fff;background:var(--blue);margin-top:20px}
+.small{font-size:.85rem;color:#6b7280}
